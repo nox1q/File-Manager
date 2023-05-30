@@ -1,0 +1,27 @@
+<resources>
+    <declare-styleable name="Toolbar">
+        <attr name="tb_showBackIcon" format="boolean" />
+        <attr name="tb_titleToolbar" format="reference|string" />
+        <attr name="tb_subtitleToolbar" format="reference|string"/>
+        <attr name="tb_leftIconVisibility" format="boolean" />
+        <attr name="tb_menuIconVisibility" format="boolean" />
+        <attr name="tb_shareIconVisibility" format="boolean" />
+        <attr name="tb_searchIconVisibility" format="boolean" />
+        <attr name="tb_additionalLeftIconVisibility" format="boolean" />
+        <attr name="tb_menuIcon" format="integer" />
+        <attr name="tb_leftIcon" format="integer" />
+        <attr name="tb_shareIcon" format="integer" />
+        <attr name="tb_searchIcon" format="integer" />
+        <attr name="tb_additionalLeftIcon" format="integer" />
+        <attr name="tb_textColor" format="reference" />
+        <attr name="tb_subtitleTextColor" format="reference"/>
+        <attr name="tb_font" format="reference" />
+        <attr name="tb_subtitleFont" format="reference"/>
+        <attr name="tb_textSize" format="dimension" />
+        <attr name="tb_subtitleTextSize" format="dimension"/>
+        <attr name="tb_title_in_center" format="boolean"/>
+        <attr name="tb_logout_view_visible" format="boolean"/>
+        <attr name="tb_badge_view_visible" format="boolean"/>
+        <attr name="tb_additionalRightText" format="reference|string"/>
+    </declare-styleable>
+</resources>
