@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="page_from_dp">%s из %s</string>
+    <string name="pos_page_from_dp">%s / %s</string>
+</resources>

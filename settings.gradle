@@ -1,3 +1,6 @@
 rootProject.name = "FileManager"
 include ':app'
-include ':core'
+include ':core_file_manager'
+include ':compressor'
+include ':image_picker'
+include ':image_preview'
