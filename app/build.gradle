@@ -16,7 +16,6 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -61,4 +60,6 @@ dependencies {
     implementation project(path: ':compressor')
     implementation project(path: ':image_picker')
     implementation project(path: ':image_preview')
+    implementation project(path: ':compressor')
+    implementation project(path: ':pdf_viewer')
 }

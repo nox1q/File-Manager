@@ -8,13 +8,13 @@ import android.media.ExifInterface
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
-
-private const val MAX_IMAGE_SIZE = 1024 * 1000
+import java.util.*
 
 @SuppressLint("SdCardPath")
-fun compressImage(originFilePath: String, localFilePath: String, filename: String): File {
+fun compressImage(originFilePath: String, localFilePath: String, filename: String, maxSizeInMb: Int): File {
 
     val avatarFile = File(localFilePath, filename)
+    val maxSize = maxSizeInMb * 1024 * 1024
 
     if (!avatarFile.exists()) {
         avatarFile.createNewFile()
@@ -28,11 +28,11 @@ fun compressImage(originFilePath: String, localFilePath: String, filename: Strin
         ExifInterface.ORIENTATION_UNDEFINED
     )
 
-    if (avatarFile.length() > MAX_IMAGE_SIZE) {
-        var streamLength = MAX_IMAGE_SIZE
+    if (avatarFile.length() > maxSize) {
+        var streamLength = maxSize
         var compressQuality = 105
         val bmpStream = ByteArrayOutputStream()
-        while (streamLength >= MAX_IMAGE_SIZE && compressQuality > 5) {
+        while (streamLength >= maxSize && compressQuality > 5) {
             bmpStream.use {
                 it.flush()
                 it.reset()
@@ -86,3 +86,5 @@ fun rotateImage(bitmap: Bitmap, angle: Float): Bitmap {
     matrix.postRotate(angle)
     return Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, true)
 }
+
+fun generateUUID() = UUID.randomUUID().toString()

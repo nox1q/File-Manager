@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/core_file_manager" />
             <option value="$PROJECT_DIR$/image_picker" />
             <option value="$PROJECT_DIR$/image_preview" />
+            <option value="$PROJECT_DIR$/pdf_viewer" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -25,6 +25,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="kz.alabs.file_manager.ui.ImageCompressorActivity"/>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="kz.alabs.image_picker.provider"
